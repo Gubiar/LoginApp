@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/screens/PageLogin.dart';
+import 'package:material_color_generator/material_color_generator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: generateMaterialColor(color: Color(0xff9F86C0)),
+        scaffoldBackgroundColor: Colors.white.withOpacity(0.97)
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: PageLogin(),
     );
   }
 }
